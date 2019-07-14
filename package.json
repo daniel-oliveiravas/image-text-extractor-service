@@ -15,5 +15,7 @@
     "tslint": "^5.16.0",
     "typescript": "^3.4.5"
   },
-  "dependencies": {}
+  "dependencies": {
+    "aws-sdk": "^2.493.0"
+  }
 }
