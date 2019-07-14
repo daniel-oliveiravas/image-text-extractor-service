@@ -2,13 +2,18 @@
   "name": "rekognition-text-in-image-service",
   "version": "1.0.0",
   "description": "Service that get texts in an image",
-  "main": "index.js",
+  "main": "index.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "ts-node-dev --respawn --transpileOnly ./src/index.ts"
   },
   "author": "Daniel Vasconcelos",
   "license": "ISC",
-  "dependencies": {
-    "aws-sdk": "^2.493.0"
-  }
+  "devDependencies": {
+    "@types/node": "^11.13.17",
+    "ts-node-dev": "^1.0.0-pre.39",
+    "tslint": "^5.16.0",
+    "typescript": "^3.4.5"
+  },
+  "dependencies": {}
 }
