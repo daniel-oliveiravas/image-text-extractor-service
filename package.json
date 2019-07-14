@@ -1,5 +1,5 @@
 {
-  "name": "rekognition-text-in-image-service",
+  "name": "image-text-extractor-service",
   "version": "1.0.0",
   "description": "Service that get texts in an image",
   "main": "index.ts",
