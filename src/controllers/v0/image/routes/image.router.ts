@@ -7,8 +7,8 @@ const router: Router = Router();
 router.post('/extract', bodyParser.raw({ type: 'image/*' }), (req: Request, res: Response) => {
     const imageBuffer = req.body;
 
-    if (!imageBuffer) {
-        return res.status(400).send('Send an image as binary body');
+    if (isObjectEmpty(imageBuffer)) {
+        return res.status(400).send('Missing required binary image body');
     }
 
     getText(imageBuffer)
@@ -20,5 +20,8 @@ router.post('/extract', bodyParser.raw({ type: 'image/*' }), (req: Request, res:
         });
 });
 
+const isObjectEmpty = (object: Object) => {
+    return Object.entries(object).length === 0 && object.constructor === Object;
+}
 
 export const ImageRouter: Router = router;
